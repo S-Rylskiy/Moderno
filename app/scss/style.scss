@@ -1,0 +1,22 @@
+@import "_stylenull.scss";
+@import "slick.scss";
+@import "_vars.scss"; 
+
+// МИКСИНЫ ДЛЯ РАБОТЫ
+@mixin font-style ($fz,$col,$fw) {font-size: $fz;color: $col;font-weight: $fw;}
+@mixin di-flx ($fld,$j,$ai){display: flex; flex-direction: $fld; justify-content: $jc; align-items: $ai;}
+
+//ШАБЛОНЫ
+
+body{
+    font-family: $font-body;
+}
+
+ /* Container
+ ===============*/
+ .container {
+    width: 100%;
+    max-width: $con-sz px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
