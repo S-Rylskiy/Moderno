@@ -1,12 +1,6 @@
 @import "_stylenull.scss";
-@import "slick.scss";
+//@import "slick.scss";
 @import "_vars.scss"; 
-
-// МИКСИНЫ ДЛЯ РАБОТЫ
-@mixin font-style ($fz,$col,$fw) {font-size: $fz;color: $col;font-weight: $fw;}
-@mixin di-flx ($fld,$j,$ai){display: flex; flex-direction: $fld; justify-content: $jc; align-items: $ai;}
-
-//ШАБЛОНЫ
 
 body{
     font-family: $font-body;
@@ -16,7 +10,119 @@ body{
  ===============*/
  .container {
     width: 100%;
-    max-width: $con-sz px;
+    max-width: $con-sz+px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+//Header
+//============================================
+.header {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    &__help {
+        margin-left: auto;
+        margin-right: 27px;
+        @include font-style(15px,$col1,400);
+        & span{
+            color:$col-red;
+        }
+        & a{
+           transition: text-decoration .1s linear;
+           &:hover{
+               text-decoration: underline;
+           } 
+        }
+    }
+
+    &__phone {
+        color: $col1;
+    }
+
+    &__log-up {
+        display: flex;
+    }
+
+    &__btn {
+        display: flex;
+        @include font-style(12px,#fff,400);
+        height: 32px;
+        width: 72px;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 7px;
+        transition: background-color .1s linear;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &__menu {
+        background-color: $title-color;
+    }
+}
+
+.btn--green{
+    background-color: $col-green;
+    &:hover{
+        background-color: #7db33f;
+    }
+}
+.btn--red{
+    background-color: $col-red;
+    &:hover{
+        background-color: #d34738;
+    }
+}
+
+.basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-right: 26px;
+    position: relative;
+    &::before{
+        content: '';
+        display: none;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: -7px;
+        right:-5px;
+        border-radius: 50%;
+        background-color: $col-red;
+    }
+}
+.menu {
+    padding: 25px 0;
+    &__list {
+        display: flex;
+        & li{
+            padding-right: 40px;
+            line-height: 2;
+        }
+    }
+    &__link {
+        @include font-style(14px,#fff,500);
+        transition: color .1s linear;
+
+        &:last-child{
+            padding-right: 0;
+        }
+
+        &:hover{
+            color: rgba( #fff, .8);
+        }    
+    }
 }

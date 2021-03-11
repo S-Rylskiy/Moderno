@@ -1,12 +1,27 @@
 //ПЕРЕМЕННЫЕ
 
 //Шрифты
-$font-body: 'arial' ;
-//$font-title: ;
-//$font-2: ;
+$font-body: 'Roboto', sans-serif;;
+
 
 //Цвет
-//$main-color: ;
+$title-color: #263238;
+$col1:#546e7a;
+$col-red: #e74c3c;
+$col-green: #8bc34a;
+$col-inp: #90a4ae;
 
 //Размер контейнера
 $con-sz: 1200;
+
+// МИКСИНЫ ДЛЯ РАБОТЫ
+@mixin font-style ($fz,$col,$fw) {font-size: $fz;color: $col;font-weight: $fw;}
+@mixin di-flx ($fld,$j,$ai){display: flex; flex-direction: $fld; justify-content: $jc; align-items: $ai;}
+
+//ШАБЛОНЫ
+%st-title{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: $title-color;
+}
