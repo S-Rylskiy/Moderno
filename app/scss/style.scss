@@ -126,3 +126,59 @@ body{
         }    
     }
 }
+
+.search {
+    background: $col-green url('../images/Icon/search/03.jpg') no-repeat;
+    background-size: cover;
+    &__inner {
+        width: 100%;
+        min-height: 533px;
+        @extend %di-flx;
+        padding: 150px 0 100px;
+    }
+
+    &__title {
+       margin-bottom: 10px;
+       & h1{
+        @include font-style(48px,#fff,700);
+        text-transform: capitalize;
+        line-height: 1.5;
+       }
+    }
+
+    &__text {
+        @include font-style(20px,#fff,500);
+        line-height: 1.5;
+        margin-bottom: 54px;
+    }
+
+    &__form {
+        max-width: 670px;
+        width: 100%;
+        position: relative;
+        input{
+            display: block;
+            width: 100%;
+            box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
+            border-radius: 4px;
+            height: 56px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0 60px 0 25px;
+            &::placeholder{
+                color: $col-inp;
+            }
+        }
+    }
+
+    &__btn{
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        top: 18px;
+        right: 20px;
+    }
+}
+
+  

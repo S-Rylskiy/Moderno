@@ -16,7 +16,7 @@ $con-sz: 1200;
 
 // МИКСИНЫ ДЛЯ РАБОТЫ
 @mixin font-style ($fz,$col,$fw) {font-size: $fz;color: $col;font-weight: $fw;}
-@mixin di-flx ($fld,$j,$ai){display: flex; flex-direction: $fld; justify-content: $jc; align-items: $ai;}
+//@mixin di-flx ($fld,$j,$ai){display: flex; flex-direction: $fld; justify-content: $jc; align-items: $ai;}
 
 //ШАБЛОНЫ
 %st-title{
@@ -24,4 +24,11 @@ $con-sz: 1200;
     font-weight: 700;
     line-height: 1.6;
     color: $title-color;
+}
+
+%di-flx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
