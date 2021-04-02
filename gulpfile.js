@@ -44,8 +44,9 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/mixitup/dist/mixitup.js',
         'app/js/jquery.rateyo.js',
+        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
         'app/js/main.js'
     ])  
     .pipe(concat('main.min.js')) //Объединение JS файлов и создание одного файла
@@ -56,7 +57,7 @@ function scripts() {
 
 //Конвертация Scss в Css 
 function styles() {
-    return src(['app/scss/style.scss','app/css/jquery.rateyo.css',
+    return src(['app/scss/style.scss','node_modules/ion-rangeslider/css/ion.rangeSlider.css','app/css/jquery.rateyo.css',
     ])
         .pipe(scss({outputStyle: 'compressed'}))    //Конвертация SCSS в СSS и сжатие
         .pipe(concat('style.min.css'))              //Создание файла
